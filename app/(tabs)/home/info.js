@@ -22,7 +22,7 @@ const info = () => {
 
       <View style={{ marginTop: 5 }}>
         <Text style={{ fontSize: 15, fontWeight: "500" }}>
-          Category - {params?.category}
+          Categoria - {params?.category}
         </Text>
       </View>
 
@@ -35,7 +35,7 @@ const info = () => {
       <Pressable style={{ flexDirection: "row", alignItems: "center", gap: 5 }}>
         <AntDesign name="plus" size={24} color="#7CB9E8" />
         <Text style={{ color: "#7CB9E8", fontSize: 16, fontWeight: "500" }}>
-          Add a subtask
+          Añade subtareas
         </Text>
       </Pressable>
 
@@ -49,7 +49,7 @@ const info = () => {
         >
           <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
             <AntDesign name="calendar" size={24} color="black" />
-            <Text>Due Date</Text>
+            <Text>Fecha limite</Text>
           </View>
 
           <Pressable
@@ -70,7 +70,7 @@ const info = () => {
         >
           <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
             <Ionicons name="time-sharp" size={24} color="gray" />
-            <Text>Time and Reminder</Text>
+            <Text>Tiempo y recordatorio</Text>
           </View>
 
           <Pressable
@@ -112,7 +112,7 @@ const info = () => {
         >
           <View style={{ flexDirection: "row", alignItems: "center", gap: 7 }}>
           <SimpleLineIcons name="note" size={24} color="black" />
-            <Text>Notes</Text>
+            <Text>Notas</Text>
           </View>
 
           <Pressable

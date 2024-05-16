@@ -34,27 +34,27 @@ const index = () => {
   const suggestions = [
     {
       id: "0",
-      todo: "Drink Water, keep healthy",
+      todo: "Apunte Psicologia:",
     },
     {
       id: "1",
-      todo: "Go Excercising",
+      todo: "Apunte Fisica: ",
     },
     {
       id: "2",
-      todo: "Go to bed early",
+      todo: "Apunte Quimica: ",
     },
     {
       id: "3",
-      todo: "Take pill reminder",
+      todo: "Apunte Matematicas: ",
     },
     {
       id: "4",
-      todo: "Go Shopping",
+      todo: "Apunte Lenguaje: ",
     },
     {
       id: "5",
-      todo: "finish assignments",
+      todo: "Apunte religion: ",
     },
   ];
   const addTodo = async () => {
@@ -141,7 +141,7 @@ const index = () => {
             justifyContent: "center",
           }}
         >
-          <Text style={{ color: "white", textAlign: "center" }}>All</Text>
+          <Text style={{ color: "white", textAlign: "center" }}>Todos</Text>
         </Pressable>
         <Pressable
           style={{
@@ -153,7 +153,7 @@ const index = () => {
             justifyContent: "center",
           }}
         >
-          <Text style={{ color: "white", textAlign: "center" }}>Work</Text>
+          <Text style={{ color: "white", textAlign: "center" }}>Tareas</Text>
         </Pressable>
         <Pressable
           style={{
@@ -177,7 +177,7 @@ const index = () => {
         <View style={{ padding: 10 }}>
           {todos?.length > 0 ? (
             <View>
-              {pendingTodos?.length > 0 && <Text>Tasks to Do! {today}</Text>}
+              {pendingTodos?.length > 0 && <Text>Tarea para hacer! {today}</Text>}
 
               {pendingTodos?.map((item, index) => (
                 <Pressable
@@ -245,7 +245,7 @@ const index = () => {
                       marginVertical: 10,
                     }}
                   >
-                    <Text>Completed Tasks</Text>
+                    <Text>Tareas Completadas</Text>
                     <MaterialIcons
                       name="arrow-drop-down"
                       size={24}
@@ -312,7 +312,7 @@ const index = () => {
                   textAlign: "center",
                 }}
               >
-                No Tasks for today! add a task
+                No hay tareas ni apuntes por hoy! Añade algun apunte
               </Text>
               <Pressable
                 onPress={() => setModalVisible(!isModalVisible)}
@@ -351,7 +351,7 @@ const index = () => {
             <TextInput
               value={todo}
               onChangeText={(text) => setTodo(text)}
-              placeholder="Input a new task here"
+              placeholder="Ingresa una nueva tarea"
               style={{
                 padding: 10,
                 borderColor: "#E0E0E0",
@@ -363,7 +363,7 @@ const index = () => {
             <Ionicons onPress={addTodo} name="send" size={24} color="#007FFF" />
           </View>
 
-          <Text>Choose Category</Text>
+          <Text>Escoger categoria</Text>
 
           <View
             style={{
@@ -374,7 +374,7 @@ const index = () => {
             }}
           >
             <Pressable
-              onPress={() => setCategory("Work")}
+              onPress={() => setCategory("Tarea")}
               style={{
                 borderColor: "#E0E0E0",
                 paddingHorizontal: 10,
@@ -383,7 +383,7 @@ const index = () => {
                 borderRadius: 25,
               }}
             >
-              <Text>Work</Text>
+              <Text>Trabajo</Text>
             </Pressable>
             <Pressable
               onPress={() => setCategory("Personal")}
@@ -407,11 +407,11 @@ const index = () => {
                 borderRadius: 25,
               }}
             >
-              <Text>WishList</Text>
+              <Text>Apuntes</Text>
             </Pressable>
           </View>
 
-          <Text>Some sugggestions</Text>
+          <Text>Algunas Sugerencias</Text>
           <View
             style={{
               flexDirection: "row",

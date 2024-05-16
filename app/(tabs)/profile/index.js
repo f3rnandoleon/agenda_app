@@ -33,16 +33,16 @@ const index = () => {
         />
         <View>
           <Text style={{ fontSize: 16, fontWeight: "600" }}>
-            Keep plans for 15 days
+            Bienvenido fernando
           </Text>
           <Text style={{ fontSize: 15, color: "gray", marginTop: 4 }}>
-            Select Categories
+            estudiante
           </Text>
         </View>
       </View>
 
       <View style={{ marginVertical: 12 }}>
-        <Text>Tasks Overview</Text>
+        <Text>Tareas</Text>
         <View
           style={{
             flexDirection: "row",
@@ -66,7 +66,7 @@ const index = () => {
             >
               {completedTasks}
             </Text>
-            <Text style={{ marginTop: 4 }}>completed tasks</Text>
+            <Text style={{ marginTop: 4 }}>Tareas completadas</Text>
           </View>
 
           <View
@@ -84,14 +84,14 @@ const index = () => {
             >
               {pendingTasks}
             </Text>
-            <Text style={{ marginTop: 4 }}>pending tasks</Text>
+            <Text style={{ marginTop: 4 }}>Tareas pendientes</Text>
           </View>
         </View>
       </View>
 
       <LineChart
         data={{
-          labels: ["Pending Tasks", "Completed Tasks"],
+          labels: ["Tareas Pendientes", "Tareas Completadas"],
           datasets: [
             {
               data: [pendingTasks, completedTasks],
@@ -134,7 +134,7 @@ const index = () => {
         }}
       >
         <Text style={{ textAlign: "center", color: "white" }}>
-          Tasks for the next seven days
+          Tareas de los proximos 7 dias
         </Text>
       </View>
 

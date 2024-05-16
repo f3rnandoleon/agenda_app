@@ -43,13 +43,13 @@ import axios from "axios";
       >
         <View style={{ marginTop: 80 }}>
           <Text style={{ fontSize: 18, fontWeight: "600", color: "#0066b2" }}>
-            TODO-LIST TRACKER
+            AGENDA DIGITAL
           </Text>
         </View>
         <KeyboardAvoidingView>
           <View style={{ alignItems: "center" }}>
             <Text style={{ fontSize: 16, fontWeight: "600", marginTop: 20 }}>
-              register  to your account
+              Registre su cuenta
             </Text>
           </View>
   
@@ -76,7 +76,7 @@ import axios from "axios";
                   width: 300,
                   fontSize: email ? 17 : 17,
                 }}
-                placeholder="enter your name"
+                placeholder="Ingrese su nombre"
               />
             </View>
             <View
@@ -105,7 +105,7 @@ import axios from "axios";
                   width: 300,
                   fontSize: email ? 17 : 17,
                 }}
-                placeholder="enter your email"
+                placeholder="ingrese su numero de carnet"
               />
             </View>
   
@@ -136,7 +136,7 @@ import axios from "axios";
                   width: 300,
                   fontSize: email ? 17 : 17,
                 }}
-                placeholder="enter your password"
+                placeholder="Cree su contrasena"
               />
             </View>
   
@@ -162,13 +162,13 @@ import axios from "axios";
                   fontSize: 16,
                 }}
               >
-                Register
+                Registrar
               </Text>
             </Pressable>
   
             <Pressable onPress={() => router.replace("/login")} style={{ marginTop: 15 }}>
               <Text style={{ textAlign: "center", fontSize: 15, color: "gray" }}>
-               Already have an account? sign Up
+               Ya creo su cuenta? Inicie Sesion
               </Text>
             </Pressable>
           </View>

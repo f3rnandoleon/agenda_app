@@ -31,18 +31,21 @@ const login = () => {
     };
     checkLoginStatus();
   }, []);
-  const handleLogin = () => {
-    const user = {
-      email: email,
-      password: password,
-    };
-
-    axios.post("http://localhost:3000/login", user).then((response) => {
+  const handleLogin = async () => {
+    try {
+      const user = { email, password };
+      const response = await axios.post('http://localhost:3000/login', user);
       const token = response.data.token;
-      console.log("token",token)
-      AsyncStorage.setItem("authToken", token);
-      router.replace("/(tabs)/home");
-    });
+      AsyncStorage.setItem('authToken', token);
+      router.replace('/(tabs)/home');
+    } catch (error) {
+      if (error instanceof AxiosError) {
+        console.error('Axios error:', error.message);
+        // Handle network error or other Axios errors
+      } else {
+        console.error('Unknown error:', error);
+      }
+    }
   };
   return (
     <SafeAreaView
@@ -50,13 +53,13 @@ const login = () => {
     >
       <View style={{ marginTop: 80 }}>
         <Text style={{ fontSize: 18, fontWeight: "600", color: "#0066b2" }}>
-          TODO-LIST TRACKER
+          AGENDA DIGITAL
         </Text>
       </View>
       <KeyboardAvoidingView>
         <View style={{ alignItems: "center" }}>
           <Text style={{ fontSize: 16, fontWeight: "600", marginTop: 20 }}>
-            Log in to your account
+            Inicia Sesion a su cuenta
           </Text>
         </View>
 
@@ -87,7 +90,7 @@ const login = () => {
                 width: 300,
                 fontSize: email ? 17 : 17,
               }}
-              placeholder="enter your email"
+              placeholder="Ingrese su numero de carnet"
             />
           </View>
 
@@ -118,7 +121,7 @@ const login = () => {
                 width: 300,
                 fontSize: email ? 17 : 17,
               }}
-              placeholder="enter your password"
+              placeholder="Ingrese su contrasena"
             />
           </View>
 
@@ -130,16 +133,16 @@ const login = () => {
               justifyContent: "space-between",
             }}
           >
-            <Text>Keep me logged in</Text>
+            <Text>Mantener Sesion</Text>
             <Text style={{ color: "#007FFF", fontWeight: "500" }}>
-              Forgot Password
+              Olvide mi Contrasena
             </Text>
           </View>
 
           <View style={{ marginTop: 60 }} />
 
           <Pressable
-            onPress={handleLogin}
+            onPress={() => router.replace("/(tabs)/home")}
             style={{
               width: 200,
               backgroundColor: "#6699CC",
@@ -157,7 +160,7 @@ const login = () => {
                 fontSize: 16,
               }}
             >
-              Login
+              Iniciar Sesion
             </Text>
           </Pressable>
 
@@ -166,7 +169,7 @@ const login = () => {
             style={{ marginTop: 15 }}
           >
             <Text style={{ textAlign: "center", fontSize: 15, color: "gray" }}>
-              Don't have an account? Sign up
+              No tiene cuenta? Registrate
             </Text>
           </Pressable>
         </View>

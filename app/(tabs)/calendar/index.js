@@ -48,7 +48,7 @@ const index = () => {
           marginHorizontal: 10,
         }}
       >
-        <Text>Completed Tasks</Text>
+        <Text>Tareas Completadas</Text>
         <MaterialIcons name="arrow-drop-down" size={24} color="black" />
       </View>
 
